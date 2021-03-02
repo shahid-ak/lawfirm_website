@@ -47,34 +47,29 @@
                       </div><!-- /.navbar-collapse -->
                 </div>
             </nav>
-            <section id="team" class="team">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="title-box">
-                                <p class="section-subtitle">You may want to</p>
-                                <h2 class="section-title">Know the attorneys</h2>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        {% for lawyer in lawyers %}
-                        <div class="col-sm-4">
-                            <div class="team-box">
-                                <img src="{{lawyer.img.url}}" class="img-responsive img-full" alt="team" style="height: 340px; object-fit: cover;">
-                                <div class="team-detail">
-                                    <ul>
-                                        <li><h3>{{lawyer.name}}</h3></li>
-                                        <li><h4>{{lawyer.field}}</h4></li>
-                                        <button type="submit" onclick="window.location.href = '/viewLawyer/{{lawyer.id}}';" class="btn btn-default btn-block btn-cn">View</button>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
+            <section id="consultation" class="consultation" >
+                <div style="min-height: 75vh;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">username</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in users %}
+                            <tr>
+                                <th scope="row">{{user.id}}</th>
+                                <td>{{user.first_name}}</td>
+                                <td>{{user.email}}</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                  </div>
             </section>
                 
 

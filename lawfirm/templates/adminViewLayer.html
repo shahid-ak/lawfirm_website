@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Texas Lawers</title>
+
+        <link href="{% static 'assets/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+        <link href="{% static 'assets/css/owl.carousel.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/css/owl.carousel.theme.min.css'%}" rel="stylesheet">
+        <link href="{% static 'assets/css/main.css'%}" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <style>
+            .gallery-wrap .img-big-wrap img {
+                height: 450px;
+                width: auto;
+                display: inline-block;
+                cursor: zoom-in;
+            }
+            .gallery-wrap .img-small-wrap .item-gallery {
+                width: 60px;
+                height: 60px;
+                border: 1px solid #ddd;
+                margin: 7px 2px;
+                display: inline-block;
+                overflow: hidden;
+            }
+            .gallery-wrap .img-small-wrap {
+                text-align: center;
+            }
+            .gallery-wrap .img-small-wrap img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+                cursor: zoom-in;
+            }
+        </style>
+
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar">
+        <!-- NavigationBar Section -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img class="img-responsive" src="{% static 'assets/images/logo.png'%}" alt="logo">
+                    </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#header">Home <span class="sr-only">(current)</span></a></li>
+                            <li><a href="/logout">Logout</a></li>
+                          </ul>
+                      </div><!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <div class="container">
+                <br>  <p class="text-center">More bootstrap 4 components on <a href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com</a></p>
+            <hr>
+            <div class="card">
+                <div class="row">
+                    <aside class="col-sm-5 border-right">
+                        <article class="gallery-wrap"> 
+                            <div class="img-big-wrap">
+                                <div> <a href="#"><img src="https://s9.postimg.org/tupxkvfj3/image.jpg"></a></div>
+                            </div> <!-- slider-product.// -->
+                            <div class="img-small-wrap">
+                            <div class="item-gallery"> <img src="https://s9.postimg.org/tupxkvfj3/image.jpg"> </div>
+                            <div class="item-gallery"> <img src="https://s9.postimg.org/tupxkvfj3/image.jpg"> </div>
+                            <div class="item-gallery"> <img src="https://s9.postimg.org/tupxkvfj3/image.jpg"> </div>
+                            <div class="item-gallery"> <img src="https://s9.postimg.org/tupxkvfj3/image.jpg"> </div>
+                            </div> <!-- slider-nav.// -->
+                        </article> <!-- gallery-wrap .end// -->
+                    </aside>
+                    <aside class="col-sm-7">
+                        <article class="card-body p-5">
+                            <h3 class="title mb-3">Original Version of Some product name</h3>
+                            <p class="price-detail-wrap"> 
+                                <span class="price h3 text-warning"> 
+                                    <span class="currency">US $</span>
+                                    <span class="num">1299</span>
+                                </span> 
+                                <span>/per kg</span> 
+                            </p> <!-- price-detail-wrap .// -->
+                            <dl class="item-property">
+                                <dt>Description</dt>
+                                <dd><p>Here goes description consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco </p></dd>
+                            </dl>
+                            <dl class="param param-feature">
+                                <dt>Model#</dt>
+                                <dd>12345611</dd>
+                            </dl>  <!-- item-property-hor .// -->
+                            <dl class="param param-feature">
+                                <dt>Color</dt>
+                                <dd>Black and white</dd>
+                            </dl>  <!-- item-property-hor .// -->
+                            <dl class="param param-feature">
+                                <dt>Delivery</dt>
+                                <dd>Russia, USA, and Europe</dd>
+                            </dl>  <!-- item-property-hor .// -->
+                            <hr>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <dl class="param param-inline">
+                                        <dt>Quantity: </dt>
+                                        <dd>
+                                            <select class="form-control form-control-sm" style="width:70px;">
+                                                <option> 1 </option>
+                                                <option> 2 </option>
+                                                <option> 3 </option>
+                                            </select>
+                                        </dd>
+                                        </dl>  <!-- item-property .// -->
+                                    </div> <!-- col.// -->
+                                    <div class="col-sm-7">
+                                        <dl class="param param-inline">
+                                            <dt>Size: </dt>
+                                            <dd>
+                                                <label class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <span class="form-check-label">SM</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <span class="form-check-label">MD</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                                <span class="form-check-label">XXL</span>
+                                                </label>
+                                            </dd>
+                                        </dl>  <!-- item-property .// -->
+                                    </div> <!-- col.// -->
+                                </div> <!-- row.// -->
+                                <hr>
+                                <a href="#" class="btn btn-lg btn-primary text-uppercase"> Buy now </a>
+                                <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                            </article> <!-- card-body.// -->
+                        </aside> <!-- col.// -->
+                    </div> <!-- row.// -->
+                </div> <!-- card.// -->
+            </div>
+                            <!--container.//-->
+            <br><br><br>
+            <article class="bg-secondary mb-3">  
+                <div class="card-body text-center">
+                    <h4 class="text-white">HTML UI KIT <br> Ready to use Bootstrap 4 components and templates </h4>
+                    <p class="h5 text-white"> for Ecommerce, marketplace, booking websites and product landing pages</p>
+                    <br>
+                    <p><a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/"> Bootstrap-ecommerce.com  
+                        <i class="fa fa-window-restore "></i></a></p>
+                </div>
+                <br><br><br>
+            </article>
+                
+
+        <!-- Footer -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p>
+                                @ Texas Lawers
+                            </p>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="footer-social">
+                                <a href="#"><i class="ion-social-facebook"></i></a>
+                                <a href="#"><i class="ion-social-linkedin-outline"></i></a>
+                                <a href="#"><i class="ion-social-skype-outline"></i></a>
+                                <a href="#"><i class="ion-social-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        
+        <!-- Scripts -->
+        <script src="{% static 'assets/js/jquery-1.12.3.min.js'%}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js'%}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+        <script src="{% static 'assets/js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'assets/js/script.js'%}"></script>
+    </body>
+</html>
