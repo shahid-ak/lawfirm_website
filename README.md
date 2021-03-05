@@ -5,7 +5,7 @@ Requirements:
 a code editor, most preferable one is vs code (download from: https://code.visualstudio.com/ ).
 python3 (insatll it from the website and see that all environmental variable are set, download from https://www.python.org/downloads/).
 
-After Python has been installed sucessfully, go to your commandpromt and insatll django and pillow using the command bellow
+After Python has been installed sucessfully, go to your commandpromt and insatll django and pillow using the command bellow:
 
 django 2: pip insatll django
 pillow: pip insatll pillow
